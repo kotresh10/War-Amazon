@@ -1,0 +1,356 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+  color: #222;
+  line-height: 1.6;
+}
+a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #1e40af;
+}
+
+/* Add to style.css */
+.profile-photo {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #2563eb;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.10);
+  background: #fff;
+}
+
+/* Navbar */
+header#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  transition: box-shadow 0.3s;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+nav ul li a {
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+nav ul li a:hover {
+  background: #e0e7ef;
+}
+
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 2rem 1.5rem;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #2563eb;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Hero */
+#hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #e0e7ef 0%, #f8fafc 100%);
+  padding-top: 5rem;
+}
+.hero-content {
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-icons {
+  margin-top: 1.2rem;
+}
+
+.icon-link {
+  display: inline-block;
+  margin: 0 12px;
+  font-size: 2.2rem;
+  color: #2563eb;
+  transition: color 0.2s, transform 0.2s;
+}
+.icon-link:hover {
+  color: #1e40af;
+  transform: scale(1.15);
+}
+
+/* .btn {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  margin: 0 0.5rem;
+  font-weight: 500;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #1e40af;
+}
+.btn.outline {
+  background: #fff;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+.btn.outline:hover {
+  background: #e0e7ef;
+} */
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.skills-grid h3 {
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+}
+.skills-grid ul {
+  list-style: disc inside;
+  margin-left: 0.5rem;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.07);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(37,99,235,0.13);
+}
+.project-card h3 {
+  margin-bottom: 0.7rem;
+  color: #2563eb;
+}
+.project-card .tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #2563eb;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 12px;
+}
+
+/* Internships */
+.internships-list > div {
+  margin-bottom: 1.2rem;
+}
+.internships-list h3 {
+  color: #1e40af;
+  margin-bottom: 0.3rem;
+}
+
+/* Timeline (Education) */
+.timeline {
+  position: relative;
+  margin-left: 1rem;
+  padding-left: 1.5rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #2563eb;
+  border-radius: 2px;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.timeline-dot {
+  position: absolute;
+  left: -0.2rem;
+  top: 0.5rem;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 3px solid #2563eb;
+  border-radius: 50%;
+}
+.timeline-content {
+  margin-left: 2rem;
+}
+.timeline-content h3 {
+  margin-bottom: 0.2rem;
+  color: #2563eb;
+}
+
+/* Achievements */
+#achievements ul {
+  margin-left: 1.2rem;
+  list-style: disc;
+}
+
+/* Certificates Section */
+.certificate-list {
+  display: flex;
+  gap: 20px;         /* space between certificates */
+  justify-content: center; /* center them horizontally */
+  flex-wrap: wrap;   /* allows wrapping on smaller screens */
+}
+
+.certificate-card {
+  width: 300px;      /* fixed width for each card */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.certificate-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+
+/* Contact */
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+#contact-form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 400px;
+}
+#contact-form input,
+#contact-form textarea {
+  padding: 0.7rem;
+  border: 1px solid #e0e7ef;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+#contact-form button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#contact-form button:hover {
+  background: #1e40af;
+}
+#form-msg {
+  color: #2563eb;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  background: #f1f5f9;
+  color: #1e293b;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  header#navbar {
+    flex-direction: column;
+    padding: 0.7rem 1rem;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+  section {
+    padding: 3rem 0.7rem 1.5rem 0.7rem;
+  }
+  .skills-grid, .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
